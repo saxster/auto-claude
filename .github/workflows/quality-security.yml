@@ -3,11 +3,6 @@ name: Quality Security
 on:
   push:
     branches: [main, develop]
-  pull_request:
-    branches: [main, develop]
-  schedule:
-    - cron: '0 0 * * 1' # Weekly on Monday at midnight UTC
-
 # Cancel in-progress runs for the same branch/PR
 concurrency:
   group: security-${{ github.workflow }}-${{ github.ref }}
