@@ -1,6 +1,8 @@
 name: Build Native Module Prebuilds
 
 on:
+  push:
+    branches: [main]
   # Build on releases
   release:
     types: [published]
