@@ -1,6 +1,8 @@
 name: Discord Release Notification
 
 on:
+  push:
+    branches: [main]
   release:
     types: [published]
 
