@@ -1,10 +1,8 @@
 name: PR Auto Label
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
-
-# Cancel in-progress runs for the same PR
+  push:
+    branches: [main]
 concurrency:
   group: pr-auto-label-${{ github.event.pull_request.number }}
   cancel-in-progress: true
