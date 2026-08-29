@@ -1,10 +1,8 @@
 name: PR Status Check
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
-
-# Cancel in-progress runs for the same PR
+  push:
+    branches: [main]
 concurrency:
   group: pr-status-${{ github.event.pull_request.number }}
   cancel-in-progress: true
