@@ -1,6 +1,8 @@
 name: PR Status Gate
 
 on:
+  push:
+    branches: [main]
   workflow_run:
     workflows: [CI, Lint, Quality Security]
     types: [completed]
