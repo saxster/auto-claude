@@ -1,6 +1,8 @@
 name: Issue Auto Label
 
 on:
+  push:
+    branches: [main]
   issues:
     types: [opened]
 
