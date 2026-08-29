@@ -2,6 +2,8 @@ name: Beta Release
 
 # Manual trigger for beta releases from develop branch
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       version:
